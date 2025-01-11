@@ -66,7 +66,7 @@ class SchemaAnnotationProcessor(
     private fun writeSchemasToKotlinFile(schemas: Map<String, Map<String, Any>>) {
         if (schemas.isEmpty()) return
 
-        val packageName = "`in`.petstrong.domain.model"
+        val packageName = "schema"
         val fileName = "GeneratedSchemas"
         val file = codeGenerator.createNewFile(Dependencies(true),  packageName, fileName)
         file.writeText("package $packageName\n\n")
