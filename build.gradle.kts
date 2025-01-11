@@ -23,3 +23,15 @@ tasks.test {
 kotlin {
     jvmToolchain(17)
 }
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "streamliners"
+            artifactId = "schemaGen"
+            version = "1.0"
+
+            from(components["java"])
+        }
+    }
+}
